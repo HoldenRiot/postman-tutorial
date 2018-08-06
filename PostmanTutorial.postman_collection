@@ -1,0 +1,43 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PostmanTutorial",
+		"_postman_id": "c54426de-0d4d-e8f7-a668-de963c468710",
+		"description": "A Basic Postman collection for Github Tutorial.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postman",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var url = data.url;",
+							"",
+							"if (url == \"http://google.com/\") {",
+							"    tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"    tests[\"Response time took less than 20 seconds\"] = responseTime < 20000;",
+							"}",
+							"",
+							"else {",
+							"    tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"    tests[\"Response time took less than 15 seconds\"] = responseTime < 15000;",
+							"}"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{url}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
