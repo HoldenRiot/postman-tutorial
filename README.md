@@ -33,3 +33,10 @@ This repository contains the following files: The Postman Collection(`PostmanTut
 9. Select the *Collection v2* option and click *Export*
 10. Save to the same folder location and overwrite `PostmanTutorial.postman_collection`.
 11. Run your Collection.
+
+### [Generating Run Reports](https://github.com/postmanlabs/newman#reporters):
+1. Install newman html reporter by doing a $`npm install -g newman-reporter-html` in a terminal window.
+#### Usage:
+In order to enable this reporter, specify html in Newman's `-r` or `--reporters` option.
+**Example:** $`newman run PostmanTutorial.postman_collection --insecure -d postman.data.json -r html`
+
